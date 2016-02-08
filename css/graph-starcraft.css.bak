@@ -1,0 +1,19 @@
+h1 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+#about {
+  margin: 10px 20px;
+}
+
+#about ol {
+  list-style: decimal;
+  margin: 5px 30px;
+}
+
+#graphDiv {
+  width: 1998px;
+  height: 400px;
+  margin-left: 205px;
+}

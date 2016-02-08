@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery-ganttView.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery-jqplot.css" />
+		<link rel="stylesheet" type="text/css" href="css/graph-starcraft.css" />
+		<script type="text/javascript" src="js/lib/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="js/lib/jquery.contextMenu.js"></script>
+		<script type="text/javascript" src="js/lib/jquery.ui.position.js" ></script>
+		<link rel="stylesheet" type="text/css" href="css/jquery.contextMenu.css"  />
+		<script type="text/javascript" >
+			$(function() {
+				$.contextMenu({
+					selector : '.context-menu-block',
+					items : {
+						area1 : {
+							name : "Textarea with height",
+							type : 'textarea',
+							value : "Hello World",
+							height : 40
+						}
+					},
+					events : {
+						show : function(opt) {
+							$.contextMenu.setInputValues(opt, this.data());
+							// this basically fills the input commands from an object
+							// like {name: "foo", yesno: true, radio: "3", ��}
+						},
+						hide : function(opt) {
+							$.contextMenu.getInputValues(opt, this.data());
+							// this basically dumps the input commands' values to an object
+							// like {name: "foo", yesno: true, radio: "3", ��}
+						}
+					}
+				});
+			});
+		</script>
+		<script id="dataTblTemplate" type="text/x-jquery-tmpl">
+			<tr>
+			<td>${Year}</td>
+			<td>${AssetVal}</td>
+			<td>${yrER}</td>
+			</tr>
+		</script>
+		<title>Finacial Model</title>
+	</head>
+	<body>
+
+		<div id="ganttChartDiv"></div>
+		<div id="graphDiv"></div>
+
+		<script type="text/javascript" src="js/lib/jquery-ui.js"></script>
+		<script type="text/javascript" src="js/lib/jquery-jqplot.js"></script>
+		<script type="text/javascript" src="js/lib/jqplot.highlighter.min.js"></script>
+		<script type="text/javascript" src="js/lib/jquery.tmpl.min.js"></script>
+		<script type="text/javascript" src="js/lib/underscore.js"></script>
+		<script type="text/javascript" src="js/taskDescription.js"></script>
+		<script type="text/javascript" src="js/buildOrder.js"></script>
+
+		<script type="text/javascript" src="js/ui.js"></script>
+		<script type="text/javascript" src="js/ganttBuilder.js"></script>
+		<script type="text/javascript" src="js/timelineBuilder.js"></script>
+
+		<script type="text/javascript" charset="utf-8">
+			ganttTheData();
+		</script>
+	</body>
+</html>

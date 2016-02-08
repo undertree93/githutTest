@@ -1,0 +1,21 @@
+h1 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+#about {
+  margin: 10px 20px;
+}
+
+#about ol {
+  list-style: decimal;
+  margin: 5px 30px;
+}
+
+#graphDiv {
+  width: 2155px;
+  height: 500px;
+  margin-left: 185px;
+}
+table { border: 2px solid blue; margin: 4px 0 4px 4px; padding: 2px; background-color: #f8f8f8; }
+table td { padding: 3px; margin: 3px; border: solid #77c 1px; }

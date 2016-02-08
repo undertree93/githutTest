@@ -1,0 +1,201 @@
+/*
+jQuery.ganttView v.0.8.0
+Copyright (c) 2010 JC Grubbs - jc.grubbs@devmynd.com
+MIT License Applies
+*/
+
+div.ganttview-hzheader-minute,
+div.ganttview-hzheader-second,
+div.ganttview-vtheader,
+div.ganttview-vtheader-item-name,
+div.ganttview-vtheader-series,
+div.ganttview-grid,
+div.ganttview-grid-row-cell {
+	float: left;
+}
+
+div.ganttview-hzheader-minute,
+div.ganttview-hzheader-second {
+/*	text-align: center;*/
+}
+
+div.ganttview-grid-row-cell.last,
+div.ganttview-hzheader-second.last,
+div.ganttview-hzheader-minute.last {
+	border-right: none;
+}
+
+div.ganttview {
+	border: 1px solid #999;
+	position: relative;
+}
+
+
+/* Horizontal Header */
+
+div.ganttview-hzheader-minute {
+	width: 60px;
+	height: 20px;
+	border-right: 1px solid #d0d0d0;
+	line-height: 20px;
+}
+
+div.ganttview-hzheader-second {
+	width: 20px;
+	height: 20px;
+	border-right: 1px solid #e0e0e0;
+	border-top: 1px solid #d0d0d0;
+	line-height: 20px;
+	color: #777;
+}
+
+/* Vertical Header */
+
+div.ganttview-vtheader {
+	margin-top: 41px;
+	width: 240px;
+	overflow: hidden;
+	background-color: #fff;
+	font-family: "MS Reference Sans Serif";
+	font-weight:bold;
+}
+
+div.ganttview-vtheader-item {
+	overflow: hidden;
+	color: #666;
+	position: relative;
+}
+
+div.ganttview-vtheader-item-name {
+	width: 235px;
+	padding-left: 5px;
+	border-top: 1px solid #d0d0d0;
+	line-height: 16px;
+}
+
+div.ganttview-vtheader-item-close,
+div.control_pad .building_mover {
+  position: absolute;
+  display: block;
+  width: 16px;
+  height: 16px;
+  text-indent: -9999em;
+  background-image: url("../images/ui-icons_222222_256x240.png");
+  cursor: pointer;
+}
+
+div.ganttview-vtheader-item-close {
+  top: 0;
+  right: 0;
+}
+
+div.control_pad .building_mover.up {
+  top: 4px;
+  right: 16px;
+}
+
+div.control_pad .building_mover.down {
+  top: 20px;
+  right: 16px;
+}
+
+div.ganttview-vtheader-item-close           { background-position: -32px -208px; top:    0; right:    0; }
+div.ganttview-vtheader-item-close:hover     { background-position: -80px -208px; }
+div.control_pad .building_mover.up          { background-position:     0      0; top:  4px; right: 16px; }
+div.control_pad .building_mover.up:hover    { background-position:     0  -16px; }
+div.control_pad .building_mover.down        { background-position: -65px      0; top: 20px; right: 16px; }
+div.control_pad .building_mover.down:hover  { background-position: -65px  -16px; }
+
+/* building adder */
+
+#building_adder {
+  position: absolute;
+  left: 0;
+  top: 15px;
+
+}
+
+/* building adder */
+
+#buildOrderSaverLoaderContainer {
+  position: absolute;
+  left: 0;
+  bottom: -400px;
+  width: 200px;
+}
+
+/* Slider */
+
+div.ganttview-slide-container {
+	overflow: auto;
+	border-left: 1px solid #999;
+}
+
+
+/* Grid */
+
+div.ganttview-grid {
+  clear: left;  
+}
+
+div.ganttview-grid-row-cell {
+	width: 20px;
+	height: 31px;
+	border-right: 1px solid #f0f0f0;
+	border-top: 1px solid #f0f0f0;
+}
+
+div.ganttview-grid-row-cell.darker {
+	border-right: 1px solid #e0e0e0;
+}
+
+div.ganttview-grid-row-cell.ganttview-weekend {
+	background-color: #fafafa;
+}
+
+
+/* Blocks */
+
+div.ganttview-blocks {
+	margin-top: 40px;
+}
+
+div.ganttview-block-container {
+	height: 28px;
+	padding-top: 4px;
+	position: relative;
+}
+
+div.ganttview-block {
+	position: absolute;
+	top: 4px;
+	height: 25px;
+	background-color: #E5ECF9;
+	border: 1px solid #c0c0c0;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+div.ganttview-block-text,
+div.ganttview-block-close,
+div.ganttview-block-start,
+div.ganttview-block-end {
+	position: absolute;
+	height: 12px;
+	font-size: 0.8em;
+	color: #999;
+	padding: 2px 3px;
+	font-family: "MS Reference Sans Serif";
+}
+
+div.ganttview-block-close { right: 0; top: 0;  font-size: .6em }
+div.ganttview-block-close:hover { text-decoration: underline; cursor: pointer; }
+div.ganttview-block-start { left: 0; bottom: 0;   font-size: .6em }
+div.ganttview-block-end   { right: 0; bottom: 0;  font-size: .6em }
+
+/* Adjustments for jQuery UI Styling */
+
+div.ganttview-block div.ui-resizable-handle.ui-resizable-s {
+	bottom: -0;
+}
